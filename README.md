@@ -8,6 +8,8 @@ QR payments, roaming keep working) and Home Assistant reads them through the ask
 If you want Home Assistant itself to be the OCPP server, use the
 [OCPP integration](https://github.com/lbbrhzn/ocpp) instead: a charger talks to one server at a time.
 
+Step-by-step guide with automation examples: [English](https://askacharge.com/askacharge/en/blog/home-assistant-ev-charger.html) · [Español](https://askacharge.com/askacharge/blog/cargadores-home-assistant.html).
+
 ## What you get
 
 One device per charger, with:
