@@ -1,0 +1,12 @@
+{
+  "domain": "askacharge",
+  "name": "askacharge.com",
+  "codeowners": ["@javierojan"],
+  "config_flow": true,
+  "documentation": "https://github.com/javierojan/askacharge-homeassistant",
+  "integration_type": "hub",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/javierojan/askacharge-homeassistant/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

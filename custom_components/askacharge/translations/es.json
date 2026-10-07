@@ -1,0 +1,78 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "askacharge.com",
+        "description": "Crea una API key en el panel de askacharge.com (menú API Keys) con el permiso Sesiones (leer) y, para arrancar y parar desde Home Assistant, Comandos OCPP → Arrancar carga y Parar carga.",
+        "data": {
+          "api_key": "API key",
+          "base_url": "URL de la API"
+        }
+      },
+      "reauth_confirm": {
+        "title": "askacharge.com",
+        "description": "La API key ya no vale. Pega una nueva.",
+        "data": {
+          "api_key": "API key"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "API key no válida o sin el permiso Sesiones: leer",
+      "cannot_connect": "No se puede conectar con askacharge.com"
+    },
+    "abort": {
+      "already_configured": "Esta API key ya está configurada",
+      "reauth_successful": "API key actualizada"
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "online": {
+        "name": "Conectado"
+      },
+      "charging": {
+        "name": "Cargando"
+      }
+    },
+    "sensor": {
+      "status": {
+        "name": "Estado",
+        "state": {
+          "available": "Disponible",
+          "preparing": "Preparando",
+          "charging": "Cargando",
+          "suspendedev": "Pausado por el coche",
+          "suspendedevse": "Pausado por el cargador",
+          "finishing": "Terminando",
+          "reserved": "Reservado",
+          "unavailable": "No disponible",
+          "faulted": "Averiado",
+          "occupied": "Ocupado",
+          "offline": "Desconectado",
+          "unknown": "Desconocido"
+        }
+      },
+      "session_energy": {
+        "name": "Energía de la sesión"
+      },
+      "session_duration": {
+        "name": "Duración de la sesión"
+      },
+      "session_start": {
+        "name": "Inicio de la sesión"
+      },
+      "last_heartbeat": {
+        "name": "Último latido"
+      },
+      "power": {
+        "name": "Potencia"
+      }
+    },
+    "switch": {
+      "charge": {
+        "name": "Carga"
+      }
+    }
+  }
+}

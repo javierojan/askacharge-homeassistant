@@ -1,0 +1,78 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "askacharge.com",
+        "description": "Create an API key in the askacharge.com panel (API Keys menu) with the Sessions (read) permission and, to start and stop from Home Assistant, OCPP commands → Start charge and Stop charge.",
+        "data": {
+          "api_key": "API key",
+          "base_url": "API URL"
+        }
+      },
+      "reauth_confirm": {
+        "title": "askacharge.com",
+        "description": "The API key no longer works. Paste a new one.",
+        "data": {
+          "api_key": "API key"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid API key, or it lacks Sessions: read",
+      "cannot_connect": "Cannot connect to askacharge.com"
+    },
+    "abort": {
+      "already_configured": "This API key is already configured",
+      "reauth_successful": "API key updated"
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "online": {
+        "name": "Online"
+      },
+      "charging": {
+        "name": "Charging"
+      }
+    },
+    "sensor": {
+      "status": {
+        "name": "Status",
+        "state": {
+          "available": "Available",
+          "preparing": "Preparing",
+          "charging": "Charging",
+          "suspendedev": "Suspended by vehicle",
+          "suspendedevse": "Suspended by charger",
+          "finishing": "Finishing",
+          "reserved": "Reserved",
+          "unavailable": "Unavailable",
+          "faulted": "Faulted",
+          "occupied": "Occupied",
+          "offline": "Offline",
+          "unknown": "Unknown"
+        }
+      },
+      "session_energy": {
+        "name": "Session energy"
+      },
+      "session_duration": {
+        "name": "Session duration"
+      },
+      "session_start": {
+        "name": "Session start"
+      },
+      "last_heartbeat": {
+        "name": "Last heartbeat"
+      },
+      "power": {
+        "name": "Power"
+      }
+    },
+    "switch": {
+      "charge": {
+        "name": "Charge"
+      }
+    }
+  }
+}
